@@ -17,7 +17,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function pplCard() {
+export default function pplCard({email, firstname, lastname, avatar}) {
   const classes = useStyles();
 
   return (
@@ -25,12 +25,11 @@ export default function pplCard() {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="/static/images/cards/contemplative-reptile.jpg"
-          title="Contemplative Reptile"
+          image={avatar}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Lizard
+            {firstname + " " + lastname}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
             Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
