@@ -30,6 +30,13 @@ function App() {
     return (
     <div className="App">
       <h3>RESPONSIVE GRID HOOKS</h3>
+      <Grid container spacing={10} style={{padding: '24px'}}>
+        {users.map(
+          users => {
+            
+          }
+        )}
+      </Grid>
       {users.map(user => user.email)}
     </div>
 );
