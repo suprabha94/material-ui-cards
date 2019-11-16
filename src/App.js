@@ -9,7 +9,7 @@ function App() {
     () => {
       async function fetchData() {
         setUser(
-          fetch('https://reqres.in/api/users')
+          await fetch('https://reqres.in/api/users')
             .then(res => res.json)
             .then(res => res.data)
         )
@@ -20,7 +20,8 @@ function App() {
   
     return (
     <div className="App">
-    <h3>RESPONSIVE GRID HOOKS</h3>
+      <h3>RESPONSIVE GRID HOOKS</h3>
+      {users.map(user => user.email)}
     </div>
 );
 }
