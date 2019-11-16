@@ -1,21 +1,27 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, {useState, useEffect} from 'react';
 import './App.css';
 
-class App extends Component {
-  render() {
+function App() {
+  
+  const [users, setUser] = useState([]);
+  
+  useEffect(
+    () => {
+      async function fetchData() {
+        setUser(
+          fetch('https://reqres.in/api/users')
+            .then(res => res.json)
+            .then(res => res.data)
+        )
+      }
+      fetchData()
+    }, []
+  )
+  
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+    <div className="App">
+    <h3>RESPONSIVE GRID HOOKS</h3>
+    </div>
+);
 }
-
 export default App;
