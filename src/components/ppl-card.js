@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles'
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -17,7 +17,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function pplCard({email, firstname, lastname, avatar}) {
+export default function PplCard({email, firstname, lastname, avatar}) {
   const classes = useStyles();
 
   return (
@@ -32,17 +32,13 @@ export default function pplCard({email, firstname, lastname, avatar}) {
             {firstname + " " + lastname}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+            {email}
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-        <Button size="small" color="primary">
-          Learn More
+        <Button href={avatar} size="small" color="primary">
+          Thumbnail Pic
         </Button>
       </CardActions>
     </Card>
