@@ -17,6 +17,7 @@ function App() {
           await fetch('https://reqres.in/api/users')
             .then(res => res.json())
             .then(res => res.data)
+            .catch(err => console.log(err, 'error...'))
         )
       }
       fetchData()
@@ -28,16 +29,17 @@ function App() {
       <h3>RESPONSIVE GRID HOOKS</h3>
       <Grid container spacing={10} style={{padding: '24px'}}>
         {users.map(
-          users => {
-            <Grid key={users.id} item xs={12} sm={6} md={4} lg={4} xl={3}>
+          user => { return (
+            <Grid key={user.id} item xs={12} sm={6} md={4} lg={4} xl={3}>
               <PplCard 
-                key={users.id} 
-                email={users.email} 
-                firstname={users.first_name}
-                lastname={users.last_name} 
-                avatar={users.avatar}
+                key={user.id} 
+                email={user.email} 
+                firstname={user.first_name}
+                lastname={user.last_name} 
+                avatar={user.avatar}
               />
             </Grid>
+            )
           }
         )}
       </Grid>
