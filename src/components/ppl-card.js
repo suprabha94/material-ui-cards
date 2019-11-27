@@ -19,7 +19,7 @@ const useStyles = makeStyles({
 
 export default function PplCard({email, firstname, lastname, avatar}) {
   const classes = useStyles();
-  console.log(email);
+
   return (
     <Card className={classes.card}>
       <CardActionArea>

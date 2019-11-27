@@ -3,6 +3,7 @@ dependencies:
   create-react-app: 3.2.0
   react: 16.10.2
   react-dom: 16.10.2
+  react-placeholder: 3.0.2
 devDependencies:
   react-scripts: 0.9.5
 packages:
@@ -5558,6 +5559,15 @@ packages:
     dev: false
     resolution:
       integrity: sha512-rPCkf/mWBtKc97aLL9/txD8DZdemK0vkA3JMLShjlJB3Pj3s+lpf1KaBzMfQrAmhMQB0n1cU/SUGgKKBCe837Q==
+  /react-placeholder/3.0.2:
+    dependencies:
+      prop-types: 15.7.2
+    dev: false
+    peerDependencies:
+      react: ^0.14 || ^15 || ^16
+      react-dom: ^0.14 || ^15 || ^16
+    resolution:
+      integrity: sha512-PItNXiq7GO3bK8iLobGLcBeRPtxyGdtAdZ7S0zeVdAlpIlUrJy+c6igzKr6uyK74Fh/WhOL5uCNju8FVUjCJEQ==
   /react-scripts/0.9.5:
     dependencies:
       autoprefixer: 6.7.2
@@ -7202,4 +7212,5 @@ specifiers:
   create-react-app: ^3.2.0
   react: ^16.9.0
   react-dom: ^16.10.2
+  react-placeholder: ^3.0.2
   react-scripts: 0.9.5
