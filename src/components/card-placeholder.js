@@ -1,5 +1,6 @@
 import ReactPlaceholder from 'react-placeholder';
 import "react-placeholder/lib/reactPlaceholder.css";
+import {TextBlock, MediaBlock, TextRow, RectShape, RoundShape} from 'react-placeholder/lib/placeholders';
 
 import React from 'react';
 
@@ -18,6 +19,7 @@ const useStyles = makeStyles({
   },
   media: {
     height: 140,
+    background: #
   },
 });
 
@@ -26,7 +28,9 @@ export default function PlaceholderCard () {
   
   return(
     <Card>
-      
+      <CardActionArea>
+        <CardMedia/>
+      </CardActionArea>
     </Card>
   )
 }
