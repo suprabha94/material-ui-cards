@@ -19,7 +19,6 @@ const useStyles = makeStyles({
   },
   media: {
     height: 140,
-    background: #
   },
 });
 
@@ -29,7 +28,7 @@ export default function PlaceholderCard () {
   return(
     <Card>
       <CardActionArea>
-        <CardMedia/>
+        <RectShape></RectShape>
       </CardActionArea>
     </Card>
   )
