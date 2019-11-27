@@ -6,6 +6,9 @@ import './App.css';
 
 import PplCard from './components/ppl-card.js';
 
+import ReactPlaceholder from 'react-placeholder';
+import "react-placeholder/lib/reactPlaceholder.css";
+
 function App() {
   
   const [users, setUser] = useState([]);
