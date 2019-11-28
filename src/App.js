@@ -13,7 +13,7 @@ import "react-placeholder/lib/reactPlaceholder.css";
 function App() {
   
   const [users, setUser] = useState([]);
-  const [ready, setready] = useState(true);
+  const [ready, setReady] = useState(false);
   
   useEffect(
     () => {
@@ -22,7 +22,10 @@ function App() {
           await fetch('https://reqres.in/api/users')
             .then(res => res.json())
             .then(res => {
-              res.data})
+              setReady(true);
+              console.log(ready)
+              return res.data
+            })
             .catch(err => console.log(err, 'error...'))
         );
       }
@@ -37,7 +40,15 @@ function App() {
         {users.map(
           user => { return (
             <Grid key={user.id} item xs={12} sm={6} md={4} lg={4} xl={3}>
-              <PlaceholderCard/>
+              {console.log(ready)}
+              {ready ? (<PplCard 
+                        key={user.id} 
+                        email={user.email} 
+                        firstname={user.first_name}
+                        lastname={user.last_name} 
+                        avatar={user.avatar}
+                      />) :
+                      (<PlaceholderCard/>) }
             </Grid>
             )
           }
@@ -47,10 +58,3 @@ function App() {
 );
 }
 export default App;
-// <PplCard 
-//                 key={user.id} 
-//                 email={user.email} 
-//                 firstname={user.first_name}
-//                 lastname={user.last_name} 
-//                 avatar={user.avatar}
-//               />
