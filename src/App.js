@@ -7,8 +7,7 @@ import './App.css';
 import PplCard from './components/ppl-card.js';
 import PlaceholderCard from './components/card-placeholder.js';
 
-import ReactPlaceholder from 'react-placeholder';
-import "react-placeholder/lib/reactPlaceholder.css";
+import FadeIn from "react-fade-in";
 
 function App() {
   
@@ -22,7 +21,10 @@ function App() {
           await fetch('https://reqres.in/api/users')
             .then(res => res.json())
             .then(res => {
-              setReady(true);
+              setTimeout(() => setReady(true), 4000
+                
+              );
+              
               console.log(ready)
               return res.data
             })
@@ -39,15 +41,19 @@ function App() {
       <Grid container spacing={10} style={{padding: '24px'}}>
         {users.map(
           user => { return (
+            <
             <Grid key={user.id} item xs={12} sm={6} md={4} lg={4} xl={3}>
-              {console.log(ready)}
-              {ready ? (<PplCard 
-                        key={user.id} 
-                        email={user.email} 
-                        firstname={user.first_name}
-                        lastname={user.last_name} 
-                        avatar={user.avatar}
-                      />) :
+
+              {ready ? (
+                      <FadeIn>
+                        <PplCard 
+                          key={user.id} 
+                          email={user.email} 
+                          firstname={user.first_name}
+                          lastname={user.last_name} 
+                          avatar={user.avatar}
+                        />
+                      </FadeIn>) :
                       (<PlaceholderCard/>) }
             </Grid>
             )
