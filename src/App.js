@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import './App.css';
 
 import PplCard from './components/ppl-card.js';
+import PlaceholderCard from './components/card-placeholder.js';
 
 import ReactPlaceholder from 'react-placeholder';
 import "react-placeholder/lib/reactPlaceholder.css";
@@ -35,13 +36,8 @@ function App() {
         {users.map(
           user => { return (
             <Grid key={user.id} item xs={12} sm={6} md={4} lg={4} xl={3}>
-              <PplCard 
-                key={user.id} 
-                email={user.email} 
-                firstname={user.first_name}
-                lastname={user.last_name} 
-                avatar={user.avatar}
-              />
+              <ReactPlaceholder ready={false} customPlaceholder={PlaceholderCard}>
+              </ReactPlaceholder>
             </Grid>
             )
           }
@@ -51,3 +47,10 @@ function App() {
 );
 }
 export default App;
+// <PplCard 
+//                 key={user.id} 
+//                 email={user.email} 
+//                 firstname={user.first_name}
+//                 lastname={user.last_name} 
+//                 avatar={user.avatar}
+//               />
