@@ -36,7 +36,7 @@ function App() {
         {users.map(
           user => { return (
             <Grid key={user.id} item xs={12} sm={6} md={4} lg={4} xl={3}>
-              <ReactPlaceholder ready={false} customPlaceholder={PlaceholderCard}>
+              <ReactPlaceholder ready={false} customPlaceholder={<PlaceholderCard/>}>
               </ReactPlaceholder>
             </Grid>
             )
