@@ -1,5 +1,5 @@
 
-import {TextBlock, MediaBlock, TextRow, RectShape, RoundShape} from 'react-placeholder/lib/placeholders';
+
 
 import React from 'react';
 
@@ -29,9 +29,9 @@ export default function PlaceholderCard () {
   return(
     <Card className={classes.card}>
       <CardActionArea>
-        <RectShape className={classes.media}/>
+        
         <CardContent>
-          <TextBlock rows={3} color='yellow'/>
+          
         </CardContent>
       </CardActionArea>
     </Card>

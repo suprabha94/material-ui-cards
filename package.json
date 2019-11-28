@@ -7,7 +7,10 @@
     "react": "^16.9.0",
     "react-dom": "^16.10.2",
     "@material-ui/core": "^4.6.1",
-    "react-placeholder": "^3.0.2"
+    "react-placeholder": "^3.0.2",
+    "react-content-loader": "^4.3.1",
+    "react-fade-in": "^0.1.6",
+    "bootstrap": "^4.4.1"
   },
   "devDependencies": {
     "react-scripts": "0.9.5"
