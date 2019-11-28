@@ -41,25 +41,25 @@ function App() {
       <Grid container spacing={10} style={{padding: '24px'}}>
         {users.map(
           user => { return (
-            <
             <Grid key={user.id} item xs={12} sm={6} md={4} lg={4} xl={3}>
-
               {ready ? (
-                      <FadeIn>
-                        <PplCard 
-                          key={user.id} 
-                          email={user.email} 
-                          firstname={user.first_name}
-                          lastname={user.last_name} 
-                          avatar={user.avatar}
-                        />
-                      </FadeIn>) :
-                      (<PlaceholderCard/>) }
+                        <FadeIn>
+                          <PplCard 
+                            key={user.id} 
+                            email={user.email} 
+                            firstname={user.first_name}
+                            lastname={user.last_name} 
+                            avatar={user.avatar}
+                          />
+                        </FadeIn>) :
+                        (<PlaceholderCard/>) 
+              }
             </Grid>
             )
           }
         )}
-      </Grid>
+              
+      </Grid>        
     </div>
 );
 }
