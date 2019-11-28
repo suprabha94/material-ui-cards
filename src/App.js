@@ -13,7 +13,7 @@ import "react-placeholder/lib/reactPlaceholder.css";
 function App() {
   
   const [users, setUser] = useState([]);
-  const [ready, setready] = useState([]);
+  const [ready, setready] = useState(true);
   
   useEffect(
     () => {
@@ -21,9 +21,10 @@ function App() {
         setUser(
           await fetch('https://reqres.in/api/users')
             .then(res => res.json())
-            .then(res => res.data)
+            .then(res => {
+              res.data})
             .catch(err => console.log(err, 'error...'))
-        )
+        );
       }
       fetchData()
     }, []
@@ -36,8 +37,7 @@ function App() {
         {users.map(
           user => { return (
             <Grid key={user.id} item xs={12} sm={6} md={4} lg={4} xl={3}>
-              <ReactPlaceholder ready={false} customPlaceholder={<PlaceholderCard/>}>
-              </ReactPlaceholder>
+              <PlaceholderCard/>
             </Grid>
             )
           }
