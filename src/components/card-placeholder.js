@@ -29,9 +29,19 @@ export default function PlaceholderCard () {
   return(
     <Card className={classes.card}>
       <CardActionArea>
-        
         <CardContent>
-          
+          <ContentLoader 
+            height={160}
+            width={400}
+            speed={2}
+            primaryColor="#f3f3f3"
+            secondaryColor="#ecebeb"
+          >
+            <rect x="9" y="8" rx="0" ry="0" width="382" height="110" /> 
+            <rect x="164" y="43" rx="0" ry="0" width="0" height="0" /> 
+            <rect x="201" y="55" rx="0" ry="0" width="0" height="0" /> 
+            <rect x="47" y="136" rx="0" ry="0" width="300" height="13" />
+          </ContentLoader>
         </CardContent>
       </CardActionArea>
     </Card>
