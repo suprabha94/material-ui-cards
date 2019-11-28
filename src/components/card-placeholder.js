@@ -18,6 +18,8 @@ const useStyles = makeStyles({
   },
   media: {
     height: 140,
+    color: '#E1DFDE',
+    background: '#E1DFDE'
   },
 });
 
@@ -25,9 +27,9 @@ export default function PlaceholderCard () {
   const classes = useStyles;
   
   return(
-    <Card>
+    <Card className={classes.card}>
       <CardActionArea>
-        <RectShape color='blue' style={{width: 30, height: 80}}/>
+        <RectShape className={classes.media}/>
         <CardContent>
           <TextBlock rows={3} color='yellow'/>
         </CardContent>
